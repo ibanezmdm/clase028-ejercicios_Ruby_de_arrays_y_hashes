@@ -9,6 +9,8 @@ c = ["Tacos", "Quesadillas", "Hamburguesas"]
 # 2 :rojo Quesadillas
 # 3 :azul Hamburguesas
 
-for i in 0..2
-   puts "#{a[i]} :#{b[2-i]} #{c[i]}"
+fin = a.length-1
+
+for i in 0..fin
+   puts "#{a[i]} :#{b[fin-i]} #{c[i]}"
 end
