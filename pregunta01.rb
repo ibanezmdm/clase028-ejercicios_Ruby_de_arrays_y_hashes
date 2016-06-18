@@ -9,10 +9,6 @@ c = ["Tacos", "Quesadillas", "Hamburguesas"]
 # 2 :rojo Quesadillas
 # 3 :amarillo Hamburguesas
 
-a.each_with_index do |a_e, a_index|
-  b.each_with_index do |b_e, b_index|
-    c.each_with_index do|c_e, c_index|
-      puts "#{a_e} :#{b_e} #{c_e}" if (a_index == b_index) and (a_index == c_index)
-    end
-  end
+for i in 0..2
+   puts "#{a[i]} :#{b[i]} #{c[i]}"
 end
