@@ -1,10 +1,11 @@
 # Generar 10 números enteros al azar y guardarlos dentro de un arreglo, luego calcular el promedio
+require 'pp'
 
 numeros = []
-10.times do
-  numeros.push(rand(20))
-end
+10.times{numeros << rand(20)}
 
-print numeros
+puts "Numeros: "
+pp numeros
 
-print numeros.inject(0.0){ |acum, e| acum + e} / numeros.length
+print "Promedio: "
+pp numeros.inject(0.0){ |acum, e| acum + e} / numeros.length
