@@ -23,11 +23,11 @@ pp flota
 puts "tu elegiste:"
 pp user
 
-aciertos = flota.select{|e| user.include? e }
+aciertos = flota & user
 
 puts "Tus aciertos son: #{aciertos.size}"
 pp aciertos
 
 puts "Nueva Flota:"
-flota.map!{|e| e.map{|e| rand(9)}}
+flota.map!{|e| [rand(9), rand(9)]}
 pp flota
