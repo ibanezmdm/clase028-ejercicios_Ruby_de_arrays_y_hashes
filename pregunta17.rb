@@ -11,4 +11,4 @@
 # 10. by default ruby says "nil" when something isn’t in there
 # 11. default values using ||= with the nil result
 
-require "pp"
+puts "descartado por confuso"
