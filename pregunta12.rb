@@ -6,14 +6,9 @@ require "pp"
 arr = [1,2,3,4,5,6,7,8]
 
 result = []
-aux = []
 
 arr.each_with_index do |e, i|
-  aux << e
-  if i.odd?
-    result << aux
-    aux = []
-  end
+  result << [e, e.next] if i.even?
 end
 
 pp result
