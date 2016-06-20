@@ -13,14 +13,10 @@ def generar_mes_por_lunes(lunes, max)
   semana = ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"]
   mes = []
   j=0
+
   for i in lunes..max
     mes << "#{semana[j]} #{i}"
-    if j == 6
-      j = 0
-    else
-        j += 1
-    end
-
+    j == 6 ? j = 0 : j += 1
   end
   return mes
 end
@@ -37,7 +33,7 @@ mes_sin_feriado = mes_completo.reject{|e| feriados.include? e}
 pp mes_sin_feriado
 
 puts "Mes sin feriados y weekend"
-weekend = ["sabado", "domingo"]
-mes_sin_feriado_ni_weekend = mes_sin_feriado.reject{|e| e =~ /weekend/ }
+weekend = ["sab", "dom"]
+mes_sin_feriado_ni_weekend = mes_sin_feriado.reject{|e| weekend.include? e[0..2]}
 
 pp mes_sin_feriado_ni_weekend
